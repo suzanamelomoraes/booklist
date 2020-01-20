@@ -23,7 +23,19 @@ class UI {
 
   deleteBook(target) {}
 
-  showAlert(message, className) {}
+  showAlert(message, className) {
+    const div = document.createElement("div");
+    div.className = `alert ${className}`;
+    div.appendChild(document.createTextNode(message));
+
+    const container = document.querySelector(".container");
+    const form = document.querySelector("#book-form");
+    container.insertBefore(div, form);
+
+    setTimeout(function() {
+      document.querySelector(".alert").remove();
+    }, 2000);
+  }
 
   clearFields() {}
 }

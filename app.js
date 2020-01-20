@@ -24,6 +24,14 @@ UI.prototype.addBookToList = function(book) {
   list.appendChild(row);
 };
 
+//clear.fields
+
+UI.prototype.clearFields = function() {
+  document.getElementById("title").value = "";
+  document.getElementById("author").value = "";
+  document.getElementById("isbn").value = "";
+};
+
 //Event Listeners
 
 document.getElementById("book-form").addEventListener("submit", function(e) {
@@ -34,7 +42,14 @@ document.getElementById("book-form").addEventListener("submit", function(e) {
   const book = new Book(title, author, isbn);
 
   const ui = new UI();
-  ui.addBookToList(book);
+
+  if (title === "" || author === "" || isbn === "") {
+    UI.showAlert("Please fill in all the fields", "error");
+  } else {
+    ui.addBookToList(book);
+
+    ui.clearFields();
+  }
 
   e.preventDefault();
 });

@@ -41,5 +41,9 @@ class UI {
     }, 2000);
   }
 
-  clearFields() {}
+  clearFields() {
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("isbn").value = "";
+  }
 }

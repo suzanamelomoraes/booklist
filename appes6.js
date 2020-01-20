@@ -21,7 +21,11 @@ class UI {
     list.appendChild(row);
   }
 
-  deleteBook(target) {}
+  deleteBook(target) {
+    if (target.className === "delete") {
+      target.parentElement.parentElement.remove();
+    }
+  }
 
   showAlert(message, className) {
     const div = document.createElement("div");

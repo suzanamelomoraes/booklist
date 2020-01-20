@@ -7,11 +7,23 @@ class Book {
 }
 
 class UI {
-  addBookToList() {}
+  addBookToList(book) {
+    const list = document.getElementById("book-list");
 
-  deleteBook() {}
+    const row = document.createElement("tr");
+    row.innerHTML = `
+    <td>${book.title}</td>
+    <td>${book.author}</td>
+    <td>${book.isbn}</td>
+    <td><a href="#" class="delete">X<a></td>
+    `;
 
-  showAlert() {}
+    list.appendChild(row);
+  }
+
+  deleteBook(target) {}
+
+  showAlert(message, className) {}
 
   clearFields() {}
 }

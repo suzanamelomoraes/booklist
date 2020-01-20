@@ -6,4 +6,12 @@ class Book {
   }
 }
 
-class UI {}
+class UI {
+  addBookToList() {}
+
+  deleteBook() {}
+
+  showAlert() {}
+
+  clearFields() {}
+}

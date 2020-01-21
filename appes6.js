@@ -51,13 +51,21 @@ class UI {
 // Local Storage Class - Local storage
 
 class Store {
-  getBooks() {}
+  static getBooks() {
+    let books;
+    if (localStorage.getItem("books") === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem("books"));
+    }
+    return books;
+  }
 
-  displayBooks() {}
+  static displayBooks() {}
 
-  addBook() {}
+  static addBook() {}
 
-  removeBook() {}
+  static removeBook() {}
 }
 
 //Event Listeners
@@ -77,6 +85,8 @@ document.getElementById("book-form").addEventListener("submit", function(e) {
     ui.showAlert("Please fill in all the fields", "error");
   } else {
     ui.addBookToList(book);
+
+    Store.addBook(book);
 
     ui.showAlert("Book Added!", "success");
 

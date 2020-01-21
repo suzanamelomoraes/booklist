@@ -82,6 +82,10 @@ class Store {
   static removeBook() {}
 }
 
+// DOM Load Event
+
+document.addEventListener("DOMContentLoaded", Store.displayBooks);
+
 //Event Listeners
 
 //add book

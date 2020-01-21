@@ -48,6 +48,18 @@ class UI {
   }
 }
 
+// Local Storage Class - Local storage
+
+class Store {
+  getBooks() {}
+
+  displayBooks() {}
+
+  addBook() {}
+
+  removeBook() {}
+}
+
 //Event Listeners
 
 //add book

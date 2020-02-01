@@ -6,7 +6,8 @@ The user can add books informing the title, author and ISBN of the book and also
 
 This application is one of the projects developed in the course Modern JavaScript from the Beginning by Udemy/Brad Traversy.
 
-###Technologies:
+
+### Technologies:
 
 - JavaScript
 - Skeleton
